@@ -51,7 +51,7 @@ _start:
 ;openfilename
 	mov EAX, sys_open
 	mov EBX, archivo
-	mov ECX, o_rdwr 		;o_rdwr EQU 1
+	mov ECX, o_rdwr
 	int 0x80
 	cmp EAX, 0
 	jle error
