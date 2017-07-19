@@ -1,3 +1,5 @@
+Trabajos escritos en lenguaje Ensamblador de arquitectura i386.
+
 Estos codigos se corren en la consola de algun sistema operativo como Ubuntu y un compilador NASM.
 
 Para correr los programas abra la consola y corra los sig comandos:
