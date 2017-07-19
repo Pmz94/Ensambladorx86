@@ -36,23 +36,23 @@ _start:
 	je salir
 
 abrirarchivo:
-	;pop EBX 			;nombre del archivo
+	;pop EBX 		;nombre del archivo
 
 	mov EAX, sys_open 	;operacion de lectura
 	mov ECX, o_rdonly 	;o_rdonly 0
-	int 0x80 			;llamada al sistema
-	cmp EAX, 0 			;comparar que EAX sea mayor que 0
-	jle error 			;si es menor salta a error
+	int 0x80 		;llamada al sistema
+	cmp EAX, 0 		;comparar que EAX sea mayor que 0
+	jle error 		;si es menor salta a error
 	ret
 
 leerarchivo:
 	mov EBX, EAX 		;mover apuntador file handle a EBX
 	mov EAX, sys_read 	;lectura
 	mov ECX, buffer_nombre 	;direccion de buffer
-	mov EDX, len_nombre		;longitud de buffer
+	mov EDX, len_nombre	;longitud de buffer
 	mov EAX, leido
 	call sprintLF
-	int 0x80 			;llamar al sistema
+	int 0x80 		;llamar al sistema
 	jmp _start
 
 cerrararchivo:
