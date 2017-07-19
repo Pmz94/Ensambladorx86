@@ -30,8 +30,6 @@ ciclo:
 	cmp ECX, 0 		;preguntamos si ECX es 0
 	jne ciclo 		;ciclar en caso de que no sea 0
 	mov EBX, 0
-;	mov ECX, EDX		;recuperar el numero de argumentos que hay en ECX
-;	mov ESI, array
 
 impresion:
 	mov EAX, [ESI+ECX*4] 	;apuntamos a donde est
@@ -45,26 +43,6 @@ impresion:
 	mov EDX, 0
 	div ECX
 	call iprintLF
-
-; ciclosum:
-; 	mov EAX, [ESI] 		;obtenemos argumento
-; 	call atoi 		;convierte el argum a numero
-; 	add EBX, EAX 		;sumamos los argumentos
-
-; 	dec ECX 		;restamos 1 al numero de argumentos
-; 	cmp ECX, 0 		;checamos si es el ultimo argumento
-; 	jnz ciclosum 		;seguimos si no es el ultimo
-; 				;si fue el ultimo argumento...
-; 	;resultado a imprimir
-; 	mov EAX, msg 		;mensaje a imprimir
-; 	call sprint		;llamar funcion para imprimir cadena
-; 	mov EDX, 0		;multiplicamos acumulado x
-; 	mov EAX, EBX 		;movemos lo que haya en EBX a EAX
-; 	mov EBX, [array] 	;divisor
-; 	div EBX
-; 	call iprintLF 		;imprimimos el argumento
-
-; 	jmp salida 		;salimos
 
 salida:
 	jmp quit
