@@ -22,26 +22,26 @@ section .text
 
 _start:
 	mov EAX, pregunta_nombre 	;preparamos para imprimir
-	call sprintLF				;mandamos a imprimir
+	call sprintLF			;mandamos a imprimir
 	mov ECX, buffer_nombre 		;direccion de buffer
 	mov EDX, buffer_nombre_len 	;longitud del buffer
-	call leertexto 				;llamamos a la funcion
+	call leertexto 			;llamamos a la funcion
 	mov EAX, buffer_nombre 		;direccion de variab
-	mov ESI, nombre 			;direccion de variab
-	call stringcopy 			;copiamos 
+	mov ESI, nombre 		;direccion de variab
+	call stringcopy 		;copiamos 
 
 	mov EAX, pregunta_edad 		;preparamos para pre
 	call sprintLF				
 	mov ECX, buffer_edad 		;direccion de buffer
 	mov EDX, buffer_edad_len 	;longitud de buffer
-	call leertexto 				;llamamos a la funcion
+	call leertexto 			;llamamos a la funcion
 	mov EAX, buffer_edad 		;preparamos para convertir
-	call atoi 					;convertimos
-	mov [edad], EAX 			;guardamos numero en
+	call atoi 			;convertimos
+	mov [edad], EAX 		;guardamos numero en
 
-	mov EAX, nombre 			;preparamos para imprimir el nombre
-	call sprintLF 				;imprimimos el nombre
-	mov EAX, [edad] 			;preparamos para imprimir la edad
-	call iprintLF 				;imprimimos la edad
+	mov EAX, nombre 		;preparamos para imprimir el nombre
+	call sprintLF 			;imprimimos el nombre
+	mov EAX, [edad] 		;preparamos para imprimir la edad
+	call iprintLF 			;imprimimos la edad
 
 	call quit
