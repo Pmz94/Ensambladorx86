@@ -24,7 +24,6 @@ _start:
 ciclo:
 	pop EAX 		;obtenemos argumento
 	call atoi 		;convierte el argum a numero
-	;call iprintLF
 	call ctof 		;hace la operacion
 	call iprintLF
 	add EBX, EAX 		;sumamos los argumentos
