@@ -3,7 +3,7 @@
 %include 'funciones.asm'
 
 section .data
-	numero		DD 543 	;Numero entero
+	numero		DD 543 		;Numero entero
 	cadena 		DB "789", 0x0 	;cadena de numeros
 
 section .text
@@ -15,7 +15,7 @@ _start:
 	call iprintLF 		;imprimir numero entero
 
 	mov EAX, cadena 	;cadena de numeros a convertir
-	call atoi 			;convertimos el numero
+	call atoi 		;convertimos el numero
 	call iprintLF 		;lo imprmimos
 
-	jmp quit			;salida
+	jmp quit		;salida
