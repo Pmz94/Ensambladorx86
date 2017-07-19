@@ -22,4 +22,4 @@ _start:
 	mov EAX, msj3 	;direccion mensaje msj3
 	call sprintLF 	;imprimir cadena
 
-	jmp quit 		;salida
+	jmp quit 	;salida
