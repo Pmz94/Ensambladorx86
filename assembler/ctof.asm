@@ -19,7 +19,7 @@ _start:
 	pop EAX 		;capturar el nombre del programa
 	dec ECX 		;restar 1 al num de argumentos que tenga ECX
 	mov EBX, 0  		;para inicializar la suma en cero 
-	mov [num_arg], ECX ;
+	mov [num_arg], ECX
 
 ciclo:
 	pop EAX 		;obtenemos argumento
