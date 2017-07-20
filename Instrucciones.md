@@ -2,7 +2,7 @@ Trabajos escritos en lenguaje Ensamblador de arquitectura i386.
 
 Estos codigos se corren en la consola de algun sistema operativo como Ubuntu y un compilador NASM.
 
-Para correr los programas abra la consola, localice la carpeta donde estan los archivos y corra los sig comandos:
+Para correr los programas abra la consola, localice la carpeta donde estan los archivos y corra los sig. comandos:
 
 "$ nasm -f elf -F stabs [nombre del archivo .asm con todo y formato]"
 
