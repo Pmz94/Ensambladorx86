@@ -1,11 +1,37 @@
-Trabajos escritos en lenguaje Ensamblador de arquitectura i386.
+# Trabajos escritos en lenguaje Ensamblador de arquitectura i386.
 
-Estos codigos se corren en la consola de algun sistema operativo como Ubuntu y un compilador NASM.
+Estos codigos se corren en la consola, necesitaras un compilador.
 
-Para correr los programas abra la consola, localice la carpeta donde estan los archivos y corra los sig. comandos:
+<!-- ### Para Windows -->
 
-"$ nasm -f elf -F stabs [nombre del archivo .asm con todo y formato]"
+<!-- Guarde los archivos dentro de la carpeta del compilador. -->
 
-"$ ld -m elf_i386 -s -o [solo el nombre del archivo] [nombre del archivo .o con todo y formato]"
+<!-- Para correr los programas abra la consola y vaya a la carpeta del compilador: -->
 
-"$ ./ [solo el nombre del archivo]"
+<!-- ```> cd C:/User/Documents/NASM``` -->
+
+<!-- Luego corra los sig. comandos: -->
+
+<!-- ```> nasm -f win32 archivo.asm -o archivo.o``` -->
+
+### Para Linux
+
+En este ejemplo usare el compilador NASM.
+
+Para instalarlo, escriba en la terminal:
+
+```$ sudo apt update```
+
+```$ sudo apt install nasm```
+
+Ya que tenga lo anterior, vaya a la carpeta donde tenga los archivos:
+
+```$ cd /home/user/ensamblador/```
+
+Luego corra los sig. comandos:
+
+```$ nasm -f elf -F stabs archivos/archivo.asm```
+
+```$ ld -m elf_i386 -s -o ejecutables/archivo archivo.o```
+
+```$ ./ejecutables/archivo```
