@@ -36,6 +36,6 @@ Luego corra los sig. comandos:
 
 ```$ nasm -f elf -F stabs archivos/archivo.asm```
 
-```$ ld -m elf_i386 -s -o ejecutables/archivo archivo.o```
+```$ ld -m elf_i386 -s -o ejecutables/archivo archivos/archivo.o```
 
 ```$ ./ejecutables/archivo```
